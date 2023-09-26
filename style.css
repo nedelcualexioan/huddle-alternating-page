@@ -9,6 +9,7 @@ body{
     font-size: 18px;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
+    min-height: 100vh;
 }
 
 h1, h2, h3{
@@ -24,11 +25,14 @@ article{
     border-radius: 10px;
     box-shadow: 0 0 5px lightgray;
     display: flex;
-    padding: 50px 150px;
-    width: 70%;
+    padding: 90px;
+    width: 80%;
     align-items: center;
-    gap: 7rem;
-    justify-content: space-around;
+    gap: 5rem;
+}
+
+article > * {
+    width: 50%;
 }
 
 .header{
@@ -41,7 +45,7 @@ article{
 
 footer{
     background-color: var(--very-dark-cyan);
-    padding: 9rem 6rem 3rem;
+    padding: 14rem 6rem 3rem;
     color: var(--very-pale-cyan);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -57,7 +61,7 @@ footer{
 }
 
 .intro-header{
-    width: 60%;
+    width: 75%;
 }
 
 .intro-desc{
@@ -68,13 +72,15 @@ footer{
 .split-group{
     display: flex;
     align-items: center;
-    padding: 1rem 4rem 4rem;
+    padding: 1rem 0 4rem;
 }
 
 
 .mockups-img{
-    height: 550px;
-    width: 770.3px;
+    max-height: 550px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .img-logo{
@@ -115,10 +121,17 @@ footer{
     align-items: center;
     gap: 2.5rem;
     padding-bottom: 150px;
+    justify-content: space-around;
 }
 
 .article-image{
-    height: 300px;
+    max-width: 70%;
+    margin: auto;
+}
+
+.feature-desc{
+    padding-top: 1rem;
+    opacity: 50%;
 }
 
 .get-started{
@@ -190,4 +203,8 @@ footer{
     display: flex;
     list-style: none;
     gap: 1.5rem;
+}
+
+.footer-article{
+    box-shadow: 0px 1px 1px 0.2px black;
 }
